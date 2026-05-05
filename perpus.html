@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perpustakaan — Smart Study Planner</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="perpus.css">
+</head>
+<body>
+
+  <!-- NAVBAR — struktur SAMA dengan index.html & materi.html -->
+  <div class="navi">
+    <div>
+      <img src="aset/logo.png" alt="Logo">
+    </div>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <header class="list">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="materi.html">Materi</a></li>
+        <li><a href="perpus.html" class="active">Perpustakaan</a></li>
+      </ul>
+    </header>
+  </div>
+
+  <main class="perpus-main">
+
+    <div class="banner-wrap">
+      <div class="banner-track" id="bannerTrack">
+        <div class="banner-slide slide-1">
+          <div class="banner-text">
+            <h2>📚 Selamat Datang di Perpustakaan</h2>
+            <p>Temukan buku seru dari berbagai kategori. Baca kapan saja!</p>
+            <a href="#rekomendasi" class="btn-banner">Mulai Baca</a>
+          </div>
+        </div>
+        <div class="banner-slide slide-2">
+          <div class="banner-text">
+            <h2>🔭 Jelajahi Sains &amp; Teknologi</h2>
+            <p>Tingkatkan wawasanmu dengan koleksi buku sains dan teknologi.</p>
+            <a href="#sains" class="btn-banner">Lihat Koleksi</a>
+          </div>
+        </div>
+        <div class="banner-slide slide-3">
+          <div class="banner-text">
+            <h2>🎭 Komik, Novel &amp; Cerpen</h2>
+            <p>Koleksi hiburan pilihan untuk menemani waktumu.</p>
+            <a href="#komik" class="btn-banner">Lihat Komik</a>
+          </div>
+        </div>
+      </div>
+      <div class="banner-dots">
+        <div class="dot active" onclick="goSlide(0)"></div>
+        <div class="dot" onclick="goSlide(1)"></div>
+        <div class="dot" onclick="goSlide(2)"></div>
+      </div>
+    </div>
+
+    <div class="book-section" id="rekomendasi">
+      <div class="section-header"><h3>⭐ Rekomendasi untuk Kamu</h3></div>
+      <div class="book-scroll" id="scroll-rek"></div>
+    </div>
+    <div class="book-section" id="komik">
+      <div class="section-header"><h3>🎭 Komik</h3></div>
+      <div class="book-scroll" id="scroll-komik"></div>
+    </div>
+    <div class="book-section" id="cerpen">
+      <div class="section-header"><h3>📝 Cerpen</h3></div>
+      <div class="book-scroll" id="scroll-cerpen"></div>
+    </div>
+    <div class="book-section" id="novel">
+      <div class="section-header"><h3>📗 Novel</h3></div>
+      <div class="book-scroll" id="scroll-novel"></div>
+    </div>
+    <div class="book-section" id="sains">
+      <div class="section-header"><h3>🔬 Sains</h3></div>
+      <div class="book-scroll" id="scroll-sains"></div>
+    </div>
+    <div class="book-section" id="geografi">
+      <div class="section-header"><h3>🌍 Geografi</h3></div>
+      <div class="book-scroll" id="scroll-geografi"></div>
+    </div>
+    <div class="book-section last-section" id="teknologi">
+      <div class="section-header"><h3>💻 Teknologi</h3></div>
+      <div class="book-scroll" id="scroll-teknologi"></div>
+    </div>
+
+  </main>
+
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-cover-wrap">
+        <img id="modalCoverImg" src="" alt="">
+        <div id="modalCoverEmoji" class="modal-cover-emoji"></div>
+      </div>
+      <div class="modal-title" id="modalTitle"></div>
+      <div class="modal-author" id="modalAuthor"></div>
+      <div class="modal-meta">
+        <table>
+          <tr><td>Genre</td><td id="modalGenre"></td></tr>
+          <tr><td>Halaman</td><td id="modalPages"></td></tr>
+          <tr><td>Rating</td><td id="modalRating"></td></tr>
+          <tr><td>Penerbit</td><td id="modalPublisher"></td></tr>
+        </table>
+      </div>
+      <a href="#" class="btn-baca-modal">📖 Baca Sekarang</a>
+    </div>
+  </div>
+
+  <!-- main.js untuk hamburger (sama seperti halaman lain) -->
+  <script src="main.js"></script>
+  <!-- perpus.js untuk fitur buku -->
+  <script src="perpus.js"></script>
+</body>
+</html>
